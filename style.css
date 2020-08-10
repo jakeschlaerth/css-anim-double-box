@@ -1,0 +1,14 @@
+/* The animation code */
+@keyframes example {
+    from {width: 100px;}
+    to {width:3000px;}
+  }
+
+  /* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
