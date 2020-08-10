@@ -1,7 +1,7 @@
 /* The animation code */
 @keyframes example {
-    from {width: 100px;}
-    to {width:3000px;}
+    from {width: 0%;}
+    to {width:100%;}
   }
 
   /* The element to apply the animation to */
