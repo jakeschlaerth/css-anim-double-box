@@ -1,0 +1,102 @@
+$color1: red;
+$color2: orange;
+
+$animationDuration: 2s;
+
+/* width animation code */
+@keyframes width {
+    from {width: 0%;}
+    to {width:100%;}
+}
+
+
+@keyframes height {
+    from {height: 0px;}
+    to {height:100%;}
+}
+
+.box1 {
+    position: relative;
+    text-align: center;
+    width: 25%;
+    top: 10px;
+    height: 80px;
+    margin: auto;
+}
+
+.box2 {
+    position: absolute;
+    text-align: center;
+    height: 120px;
+    left: 0; 
+    right: 0;
+    top: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 400px;
+}
+
+
+.jake {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px; /* Need a specific value to work */
+    font-family: Roboto;
+    font-weight: bold;
+
+}
+
+.top {
+    position: absolute;
+    top:0;;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(90deg, $color1, $color2);
+    margin: 0 auto;
+    animation-name: width;
+    animation-duration: $animationDuration;
+    animation-fill-mode: forwards;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(90deg, $color2, $color1);
+    margin: 0 auto;
+    animation-name: width;
+    animation-duration: $animationDuration;
+    // animation-delay: .25s;
+    animation-fill-mode: forwards;
+}
+
+.left {
+    width: 5px;
+    height: 0px;
+    background-image: linear-gradient($color1, $color2);
+    position: absolute;
+    left: 0;
+    animation-name: height;
+    animation-duration: $animationDuration;
+    animation-fill-mode: forwards;
+}
+
+.right {
+    width: 5px;
+    height: 0px;
+    background-image: linear-gradient($color2, $color1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-name: height;
+    animation-duration: $animationDuration;
+    animation-fill-mode: forwards;
+}
+
+
+  
